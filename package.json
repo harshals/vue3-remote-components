@@ -1,0 +1,21 @@
+{
+  "name": "demo-vue3-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "compile": "vite build -c lib.config.js"
+  },
+  "dependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@itsy/vite-css-inject": "^1.0.2",
+    "@rollup/plugin-dynamic-import-vars": "^2.0.3",
+    "@vitejs/plugin-vue": "^1.10.2",
+    "@vue/compiler-sfc": "^3.3.0",
+    "esm": "^3.2.25",
+    "vite": "^2.9.16"
+  }
+}
