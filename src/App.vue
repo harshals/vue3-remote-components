@@ -22,25 +22,17 @@
 </div>
 </template>
 
-<script>
+<script setup>
 import CompiledComponent from "./components/CompiledComponent.vue";
 import DynamicComponent from "./components/DynamicComponent.vue";
 import RemoteComponent from "./components/RemoteComponent.vue";
-export default {
-  components: { DynamicComponent, RemoteComponent, CompiledComponent },
-  data(){
-    return{
-      items: ['simple-with-css', 'with-composible'],
-      which:'simple-with-css',
-    }
-  },
-  computed:{
-    currentComponent(){
-      return this.which;
-    },
-    isProduction(){ console.log(import.meta.env.PROD ) ; return import.meta.env.PROD }
-  }
-}
+import {computed, ref} from 'vue'
+
+const items = ['simple-with-css', 'with-composible']
+const which = ref('simple-with-css')
+const currentComponent = computed(() => which.value)
+const isProduction = computed(() => import.meta.env.PROD)
+
 </script>
 
 <style>
